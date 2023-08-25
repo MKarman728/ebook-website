@@ -14,4 +14,16 @@ function userScroll() {
     });
 }
 
+function updateSize() {
+    width = window.innerWidth;
+    console.log(width);
+    navbar = document.querySelector('.navbar');
+    if (width < 992) {
+        navbar.classList.add('bg-dark');
+    } else {
+        navbar.classList.remove('bg-dark');
+    }
+}
+
 document.addEventListener('DOMContentLoaded', userScroll);
+window.addEventListener('resize', updateSize);
